@@ -1,6 +1,6 @@
-# CCAR Stress Testing Assistant
+# Severely Adverse
 
-A retrieval-augmented question-answering system grounded in five public Federal Reserve documents from the 2026 CCAR/DFAST stress-testing cycle. Every answer cites its source document and page, and the system explicitly declines to answer questions outside its document set rather than guessing.
+A CCAR/DFAST stress-testing Q&A assistant, grounded in five public Federal Reserve documents from the 2026 CCAR/DFAST stress-testing cycle. Every answer cites its source document and page, and the system explicitly declines to answer questions outside its document set rather than guessing.
 
 ## What it does
 

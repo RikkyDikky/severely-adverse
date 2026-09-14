@@ -26,8 +26,9 @@ def load_pipeline():
 
 sg = load_pipeline()
 
-st.set_page_config(page_title="CCAR Stress Testing Assistant", page_icon="🏦")
-st.title("CCAR Stress Testing Assistant")
+st.set_page_config(page_title="Severely Adverse", page_icon="🏦")
+st.title("Severely Adverse")
+st.caption("A CCAR/DFAST stress-testing Q&A assistant")
 st.caption(
     "Answers questions about the Federal Reserve's 2026 CCAR/DFAST cycle, "
     "grounded in five public documents: the 2026 Stress Test Scenarios, "

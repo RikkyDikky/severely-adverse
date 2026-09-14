@@ -1,4 +1,4 @@
-# Topic 2 Project: CCAR Stress Testing Assistant
+# Topic 2 Project: Severely Adverse (CCAR Stress Testing Assistant)
 
 _Scope locked: 2026-09-12_
 
