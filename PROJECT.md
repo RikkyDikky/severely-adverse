@@ -57,7 +57,7 @@ Five public Federal Reserve documents, ~188 pages total:
 3. [x] Build hybrid search + citation-bearing generation
 4. [x] Evaluate (RAG triad + numeric-fact test)
 5. [x] Deploy as a Streamlit app
-6. [ ] Push to GitHub with a README
+6. [x] Push to GitHub with a README — https://github.com/RikkyDikky/severely-adverse
 7. [ ] At least one LinkedIn post about this topic (no fixed category/timing)
 
 ## Data rule reminder

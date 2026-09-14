@@ -10,6 +10,7 @@ stored the result with document/page metadata attached.
 """
 
 import re
+import pathlib
 import chromadb
 import voyageai
 from anthropic import Anthropic
@@ -22,6 +23,12 @@ anthropic_client = Anthropic()
 
 RRF_K = 60
 
+# Anchored to this file's own folder rather than the working directory --
+# Streamlit Community Cloud always runs apps with the working directory set
+# to the repo root, not the app's own folder, so a bare relative path like
+# "./chroma_db" would look in the wrong place once deployed.
+SCRIPT_DIR = pathlib.Path(__file__).resolve().parent
+
 
 def tokenize(text):
     return re.findall(r"\w+", text.lower())
@@ -29,7 +36,7 @@ def tokenize(text):
 
 # --- Load the whole corpus back out of Chroma (BM25 needs every chunk to
 # compute its term-frequency statistics, not just the top matches) ---
-chroma_client = chromadb.PersistentClient(path="./chroma_db")
+chroma_client = chromadb.PersistentClient(path=str(SCRIPT_DIR / "chroma_db"))
 collection = chroma_client.get_or_create_collection(name="ccar_2026")
 
 all_data = collection.get(include=["documents", "metadatas"])

@@ -13,12 +13,17 @@ pointless since the underlying data doesn't change between questions.
 """
 
 import importlib.util
+import pathlib
 import streamlit as st
+
+SCRIPT_DIR = pathlib.Path(__file__).resolve().parent
 
 
 @st.cache_resource
 def load_pipeline():
-    spec = importlib.util.spec_from_file_location("search_and_generate", "02_search_and_generate.py")
+    spec = importlib.util.spec_from_file_location(
+        "search_and_generate", str(SCRIPT_DIR / "02_search_and_generate.py")
+    )
     module = importlib.util.module_from_spec(spec)
     spec.loader.exec_module(module)
     return module
