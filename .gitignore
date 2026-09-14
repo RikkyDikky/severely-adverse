@@ -7,3 +7,4 @@ venv/
 code/peek_chunks.py
 code/diagnose_sr1518.py
 PROJECT.md
+FINDINGS.md

@@ -47,10 +47,8 @@ PDFs --(pdfplumber: text + tables)--> chunks with document/page metadata
 
 ## Evaluation
 
-- **RAG triad** (context relevance / faithfulness / answer relevance), five general questions across all five documents: four scored 4-5/5 on every dimension. The one deliberately out-of-scope question surfaced a finding about LLM-as-judge evaluation itself — see below.
-- **Numeric-fact accuracy**: 6/6 correct on a hand-verified test set against the Results report's loss-rate and capital-ratio tables (a common concern with RAG systems is unreliable extraction of precise numeric facts from tables; this is a real, tested data point against that, not a large-sample proof).
-
-Full write-ups of two notable findings from building this project (a PDF-extraction bug and a subtlety in how LLM-as-judge evaluation can leak the judge's own outside knowledge into a supposedly grounded score) are in [`FINDINGS.md`](./FINDINGS.md).
+- **RAG triad** (context relevance / faithfulness / answer relevance) on a five-question test set spanning all five documents: 4-5/5 on every dimension for four questions; a deliberately out-of-scope question scored lower on answer relevance while still avoiding hallucination.
+- **Numeric-fact accuracy**: 6/6 correct on a hand-verified test set against the Results report's loss-rate and capital-ratio tables.
 
 ## Setup
 
