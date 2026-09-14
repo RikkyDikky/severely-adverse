@@ -6,3 +6,4 @@ venv/
 .DS_Store
 code/peek_chunks.py
 code/diagnose_sr1518.py
+PROJECT.md
